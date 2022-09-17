@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #181818;
+}
+.button{
+  width: 100px;
+  padding: 0;
+  
+}
+
+
+.card-img-top{
+  height: 300px;
+}
+
+.card-text{
+  border: 2px solid rgb(220, 212, 212);
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgb(113, 111, 111);
+}
+.prev-item{
+  width: 100px;
+  margin-left: 50px;
+}
+
+.next-item{
+  width: 100px;
+}
+.card{
+  width: 280px;
+}

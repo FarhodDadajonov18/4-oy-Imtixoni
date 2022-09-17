@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center text-white mt-2">Movies</h1>
+    <form class="form  d-flex  justify-content-between mt-4">
+      <div class="mb-3 w-50 ">
+        <select class="select form-select w-75">
+          <option hidden>Choose your favourite movie...</option>
+          <option value="movie">Movie</option>
+          <option value="series">Series</option>
+          <option value="game">Game</option>
+        </select>
+      </div>
+
+      <div class="div w-50">
+        <input class=" input form-control w-75" type="text" placeholder="Search your favourite...">
+      </div>
+      <button type="submit" class="btn btn-primary w-25 me-auto">Submit</button>
+    </form>
+
+    <ul class="bookmark-list">
+
+    </ul>
+
+    <ul class=" list list-unstyled d-flex  align-items-center justify-content-md-center  justify-content-sm-center justify-content-xl-center   flex-wrap  mt-3" >
+      <!-- <li class="item rounded w-25 p-2">
+       <div class="card">
+        <img src="https://picsum.photos/id/200/200" class="card-img-top rounded">
+        <div class="card-body">
+         <h5 class="card-title">Card title</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <a href="#" class="btn btn-primary">Go somewhere</a>
+         </div>   
+        </div> 
+      </li> -->
+    </ul>
+    
+    <ul class="list-page list-unstyled d-flex  align-items-center mx-auto text-white w-25  ">
+       <li class="prev-item mx-auto btn btn-info ">Prev</li>
+
+    <li>
+        <p class="pagination-list">1</p>
+    </li>
+
+      <li class="next-item mx-auto btn btn-info  m-0">Next</li>
+  </ul>
+
+   
+  </div>
+
+                                     <!-- Modal section -->
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class=" d-block m-auto " id="exampleModalLabel">Movies Images</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img class="d-block m-auto modal-img" src="https://picsum.photos/id/400/300" alt="">
+        <h3 class="modal-title"></h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                               <!-- Template section  -->
+
+
+  <template id="template">
+    <li class="item rounded  p-2">
+      <div class="card ">
+       <img src="https://picsum.photos/id/200/200" class="card-img-top rounded js-img ">
+       <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text h6 text-danger mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    
+        <button type="button" class="js-button btn btn-info " data-bs-toggle="modal" data-bs-target="#exampleModal">View more</button>
+        <button type="button" class="js-bookmark btn btn-success " >bookmark</button>
+        </div>   
+       </div> 
+     </li>
+  </template>
+
+
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
