@@ -12,6 +12,8 @@ let bookmarkList = document.querySelector(".bookmark-list")
 
 
 let page = 1; 
+
+
 let bookmarkArr = JSON.parse(localStorage.getItem("movies")) || [];
 console.log(bookmarkArr);
 
@@ -39,8 +41,6 @@ let movieBookmark = async (imdb) => {
     console.log(e.message);
   }
 }
-
-
 
 
 
@@ -140,8 +140,10 @@ function bookmarkItemRender () {
 
   bookmarkArr.forEach(el => {
     bookmarkList.innerHTML +=`
-      <li>
-        <span>${el.Title}</span> 
+      <li class="bookmark-page">
+        <img class="bookmark-img" src="${el.Poster}" width="280px" height="180px">
+        <h2 class="title">${el.Title}</h2> 
+        <h2 class="year">${el.Year}</h2> 
         <button type="button" class="btn btn-danger delet-item" id = ${el.imdbID}>delete</button>
       </li>
     `
@@ -151,7 +153,7 @@ function bookmarkItemRender () {
 bookmarkItemRender()
 
 
-bookmarkList,addEventListener("click", evt => {
+bookmarkList.addEventListener("click", evt => {
   if(evt.target.matches(".delet-item")) {
     let moveId = evt.target.id
 
